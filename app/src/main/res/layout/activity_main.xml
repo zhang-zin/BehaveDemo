@@ -9,7 +9,8 @@
     <!-- face部分 -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_behavior=".behavior.FaceBehavior">
 
         <ImageView
             android:id="@+id/iv_face"
@@ -31,7 +32,8 @@
     <com.zj.behavedemo.widget.TopBarLayout
         android:id="@+id/cl_top_bar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/top_bar_height">
+        android:layout_height="@dimen/top_bar_height"
+        app:layout_behavior=".behavior.TopBarBehavior">
 
         <ImageView
             android:id="@+id/iv_back"
@@ -76,7 +78,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cls_title_bar"
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="48dp"
+        app:layout_behavior=".behavior.TitleBarBehavior">
 
         <TextView
             android:id="@+id/tv_cls_content_name"
@@ -95,7 +98,7 @@
             android:layout_height="32dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/shape_collect_btn_bg"
-            android:drawableLeft="@mipmap/add"
+            android:drawableStart="@mipmap/add"
             android:drawablePadding="4dp"
             android:gravity="center_vertical"
             android:text="收藏"
@@ -108,10 +111,12 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
+        android:id="@+id/ll_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:translationY="@dimen/content_trans_y">
+        android:translationY="@dimen/content_trans_y"
+        app:layout_behavior=".behavior.ContentBehavior">
 
         <com.flyco.tablayout.SlidingTabLayout
             android:id="@+id/stl"
